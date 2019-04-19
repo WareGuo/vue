@@ -1,1 +1,1 @@
-web: python app.py
+web: java -jar target/book-1.0.jar

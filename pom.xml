@@ -11,7 +11,7 @@
 	<groupId>com.hua</groupId>
 	<artifactId>book</artifactId>
  	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>book</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

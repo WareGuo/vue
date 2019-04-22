@@ -1,13 +1,13 @@
-package com.hua.book;
+package com.hua.note;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookApplication {
+public class NoteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookApplication.class, args);
+		SpringApplication.run(NoteApplication.class, args);
 	}
 
 }

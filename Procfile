@@ -1,1 +1,1 @@
-web: java -jar target/note-1.0.jar
+web: gunicorn app --log-file -

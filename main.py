@@ -9,7 +9,9 @@ app.config['PERMANENT_SESSION_LIFETIME']=timedelta(days=7)
 
 @app.route("/")
 def index():
-    placesList=session.get('places').split("@")
+    placesList = None
+    if(session.get('places')):
+        placesList=session.get('places').split("@")
     return render_template("index.html",places=placesList)
 
 @app.route("/add", methods=["POST"])

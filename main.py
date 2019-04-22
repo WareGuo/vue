@@ -4,7 +4,7 @@ from datetime import timedelta
 import random
 
 app = Flask(__name__)
-app.config['SECRET_KEY']=os.urandom(24)
+app.config['SECRET_KEY'] = b"\x86\xfc'\x95q\xee@a\xeb\x19T \xbb\x0e\x05\xb6H\xa1\x16\x85\x80\x17Fb"
 app.config['PERMANENT_SESSION_LIFETIME']=timedelta(days=7)
 
 @app.route("/")

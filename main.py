@@ -9,10 +9,10 @@ def index():
 
 @app.route("/add", methods=["POST"])
 def add():
-    temp = redirect(url_for("index"))
+    places=request.cookies.get('places')
+    temp = render_template("index.html",places=places)
     response = make_response(temp)
     place = request.form.get("place")
-    places = request.cookies.get('places')
     if(places):
         place += places
     response.set_cookie("places", place, expires=100000000)

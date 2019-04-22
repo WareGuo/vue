@@ -15,7 +15,10 @@ def index():
 def add():
     place = request.form.get("place")
     places = session.get('places')
-    session['places'] = places + place
+    if(places):
+        session['places'] = places + place
+    else:
+        session['places'] = place
     return redirect(url_for("index"))
 
 if __name__ == "__main__":

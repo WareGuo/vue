@@ -12,8 +12,10 @@ def add():
     temp = redirect(url_for("index"))
     response = make_response(temp)
     place = request.form.get("place")
-    places=request.cookies.get('places')
-    response.set_cookie("places", places + place, expires=100000000)
+    places = request.cookies.get('places')
+    if(places):
+        place += places
+    response.set_cookie("places", place, expires=100000000)
     return response
 
 if __name__ == "__main__":

@@ -8,9 +8,11 @@
 </head>
 <body>
     <ul>
+        {% if places %}
         {% for k in places %}
         <li>{{ k }}</li>
         {% endfor %}
+        {% endif %}
     </ul>
     <form action="{{url_for('add')}}" method="POST">
         <label>请输入吃饭的地方!</label>

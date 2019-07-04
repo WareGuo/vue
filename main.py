@@ -14,6 +14,10 @@ def index():
         placesList=session.get('places').split("@")
     return render_template("index.html",places=placesList)
 
+@app.route("/colorball")
+def colorball():
+    return render_template("colorball.html")
+
 @app.route("/add", methods=["POST"])
 def add():
     place = request.form.get("place")
